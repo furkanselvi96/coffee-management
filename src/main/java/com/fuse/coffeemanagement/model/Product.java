@@ -1,5 +1,6 @@
 package com.fuse.coffeemanagement.model;
 
+import com.fuse.coffeemanagement.model.enums.ProductType;
 import jakarta.persistence.*;
 import jakarta.persistence.Table;
 import lombok.Getter;

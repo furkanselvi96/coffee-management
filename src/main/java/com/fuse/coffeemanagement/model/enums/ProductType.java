@@ -1,4 +1,4 @@
-package com.fuse.coffeemanagement.model;
+package com.fuse.coffeemanagement.model.enums;
 
 public class ProductType {
 

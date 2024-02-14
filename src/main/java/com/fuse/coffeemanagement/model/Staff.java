@@ -1,5 +1,6 @@
 package com.fuse.coffeemanagement.model;
 
+import com.fuse.coffeemanagement.model.enums.StaffType;
 import jakarta.persistence.*;
 import jakarta.persistence.Table;
 import lombok.Getter;
@@ -22,6 +23,10 @@ public class Staff {
 
     @Column(name = "lastname", nullable = false)
     private String lastname;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "staff_type", nullable = false)
+    private StaffType staffType;
 
     @Override
     public boolean equals(Object o) {
