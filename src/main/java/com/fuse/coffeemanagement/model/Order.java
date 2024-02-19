@@ -23,23 +23,24 @@ public class Order {
     private Staff staff;
 
     @ManyToOne
-    @JoinColumn(name = "table_number", referencedColumnName = "id")
+    @JoinColumn(name = "table_id",referencedColumnName = "id")
     private TableDetail tableDetail;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "order_date", nullable = false)
     private Date orderDate;
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Order order = (Order) o;
-        return Objects.equals(id, order.id) && Objects.equals(staff, order.staff) && Objects.equals(orderDate, order.orderDate);
+        return Objects.equals(id, order.id) && Objects.equals(staff, order.staff) && Objects.equals(tableDetail, order.tableDetail) && Objects.equals(orderDate, order.orderDate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, staff, orderDate);
+        return Objects.hash(id, staff, tableDetail, orderDate);
     }
 }
