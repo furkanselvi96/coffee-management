@@ -1,6 +1,5 @@
 package com.fuse.coffeemanagement.service;
 
-import com.fuse.coffeemanagement.dao.StaffRepository;
 import com.fuse.coffeemanagement.dao.TableDetailRepository;
 import com.fuse.coffeemanagement.model.TableDetail;
 import org.springframework.data.jpa.repository.JpaRepository;
